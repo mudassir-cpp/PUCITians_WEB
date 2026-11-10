@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PUCITians — Web Semester Project Description</title>
+<style>
+  @page { size: A4; margin: 18mm; }
+  body { font-family: "Calibri", "Segoe UI", sans-serif; color: #1a1a1a; max-width: 750px; margin: 0 auto; padding: 24px; font-size: 13.5px; line-height: 1.45; }
+  .header { text-align: center; border-bottom: 3px solid #0d6efd; padding-bottom: 10px; margin-bottom: 14px; }
+  .header h1 { margin: 0; font-size: 22px; color: #0d6efd; }
+  .header p { margin: 3px 0; font-size: 12.5px; color: #444; }
+  h2 { font-size: 15px; color: #0d6efd; margin: 14px 0 5px 0; border-bottom: 1px solid #cfe2ff; padding-bottom: 2px; }
+  p { margin: 5px 0; text-align: justify; }
+  ul { margin: 4px 0 6px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+  .meta { display: flex; justify-content: space-between; font-size: 12.5px; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>PUCITians — Academic Hub for PUCIT Students (Web)</h1>
+  <p><b>Web Engineering — Semester Project | One-Page Description</b></p>
+  <div class="meta">
+    <span><b>Student:</b> Mudassir Ashraf</span>
+    <span><b>Roll No:</b> BSEF24M015</span>
+    <span><b>Section:</b> Regular</span>
+  </div>
+</div>
+
+<h2>Problem Statement</h2>
+<p>Academic life at PUCIT is scattered across many platforms: lecture slides live on teachers' data / <i>\\printsrv</i>, TA marksheets are spread over multiple Google Docs, past papers and lab materials sit in senior students' GitHub repos, and announcements are buried in chats and Drive links. Students waste time searching, miss updates, and have no privacy-aware way to view their marks. There is no single campus-focused web platform that brings resources, joinable classes, limited mark visibility, and student knowledge together.</p>
+
+<h2>Proposed Solution</h2>
+<p><b>PUCITians</b> is a web application (hosted at <b>pucit.app</b>, a domain already acquired for the project) that centralizes PUCIT academic activity in one place. Users sign in with their <b>@pucit.edu.pk</b> Google account. Admins create classes and assign teachers; students join classes through invite links (e.g. <i>pucit.app/&lt;id&gt;</i>). Each class provides a Classroom-style feed of materials and announcements, a curated resource hub (slides, Drive links, past papers and labs from senior GitHub repos), and a privacy-aware TA marksheet where students only see the fields they are allowed to see (e.g. lab presence, marks shared on comments). A student-run wiki/blog, moderated by admins, lets campus knowledge live in one platform instead of being lost across chats, Docs, and Drives.</p>
+
+<h2>User Roles</h2>
+<ul>
+  <li><b>Admin</b> — creates classes, assigns teachers, approves student wiki/blog posts, manages users.</li>
+  <li><b>Teacher / TA</b> — posts materials and announcements, manages the class marksheet, curates resources.</li>
+  <li><b>Student</b> — joins classes via invite link, views materials and permitted marks, submits wiki/blog drafts.</li>
+</ul>
+
+<h2>Key Features</h2>
+<ul>
+  <li>PUCIT-only login — Google OAuth restricted to @pucit.edu.pk accounts</li>
+  <li>Class management — admins create classes, add teachers; students join via link (pucit.app/&lt;id&gt;)</li>
+  <li>Classroom-style feed — materials, announcements, and resource links per class</li>
+  <li>Resource hub — slides, Drive links, past papers and labs from senior GitHub repos</li>
+  <li>Privacy-aware TA marksheet — students see only permitted fields</li>
+  <li>Student wiki/blog — drafts by students, published after admin approval</li>
+  <li>Role-based dashboards — my classes, allowed marks, pending/approved posts</li>
+</ul>
+
+
+</body>
+</html>
