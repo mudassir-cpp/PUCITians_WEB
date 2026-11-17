@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PUCITians</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">PUCITians</a>
+            <div class="navbar-nav ms-auto">
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    @if (User.IsInRole("Student"))
+                    {
+                        <a class="nav-link active" asp-controller="Student" asp-action="Index">Student</a>
+                    }
+                    else if (User.IsInRole("Teacher"))
+                    {
+                        <a class="nav-link active" asp-controller="Teacher" asp-action="Index">Teacher</a>
+                    }
+                    else if (User.IsInRole("Admin"))
+                    {
+                        <a class="nav-link active" asp-controller="Admin" asp-action="Index">Admin</a>
+                    }
+                    <span class="navbar-text me-3">@User.Identity.Name</span>
+                    <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                        <button type="submit" class="nav-link btn btn-link">Logout</button>
+                    </form>
+                }
+                else
+                {
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                    <a class="nav-link" asp-controller="Account" asp-action="Login">Login</a>
+                    <a class="nav-link" asp-controller="Account" asp-action="Register">Signup</a>
+                }
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,41 @@
+@model StudentHomeViewModel
+@{
+    ViewData["Title"] = "Student Home";
+}
+
+<div class="mt-4">
+    <h2>Student Home</h2>
+    <p>Welcome, @Model.Name. Join classes, view materials, and see allowed marks.</p>
+
+    <div class="box">
+        <h4>My Classes</h4>
+        <ul>
+            @foreach (var item in Model.Classes)
+            {
+                <li>@item</li>
+            }
+        </ul>
+        <button class="btn btn-primary btn-sm" type="button">Join with invite code</button>
+    </div>
+
+    <div class="box">
+        <h4>Allowed Marks</h4>
+        <ul>
+            @foreach (var item in Model.Marks)
+            {
+                <li>@item</li>
+            }
+        </ul>
+    </div>
+
+    <div class="box">
+        <h4>Wiki</h4>
+        <ul>
+            @foreach (var item in Model.Wiki)
+            {
+                <li>@item</li>
+            }
+        </ul>
+        <button class="btn btn-secondary btn-sm" type="button">Write a guide</button>
+    </div>
+</div>

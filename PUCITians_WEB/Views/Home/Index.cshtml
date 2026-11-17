@@ -1,0 +1,26 @@
+﻿@model LandingViewModel
+@{
+    ViewData["Title"] = "PUCITians";
+}
+
+<div class="mt-4">
+    <div class="p-4 mb-4 bg-primary text-white rounded">
+        <h1>PUCITians</h1>
+        <p>Academic hub for PUCIT students. Classes, materials, marks, and wiki in one place.</p>
+        <a class="btn btn-light" asp-controller="Account" asp-action="Register">Signup</a>
+        <a class="btn btn-outline-light" asp-controller="Account" asp-action="Login">Login</a>
+    </div>
+
+    <h3>Features</h3>
+    <ul>
+        @foreach (var feature in Model.Features)
+        {
+            <li>@feature</li>
+        }
+    </ul>
+
+    <h3>Role pages</h3>
+    <a class="btn btn-secondary me-2" asp-controller="Student" asp-action="Index">Student Home</a>
+    <a class="btn btn-secondary me-2" asp-controller="Teacher" asp-action="Index">Teacher Home</a>
+    <a class="btn btn-secondary" asp-controller="Admin" asp-action="Index">Admin Home</a>
+</div>

@@ -1,3 +1,10 @@
 .DS_Store
 Thumbs.db
 *.log
+bin/
+obj/
+.vs/
+*.user
+*.db
+*.db-shm
+*.db-wal

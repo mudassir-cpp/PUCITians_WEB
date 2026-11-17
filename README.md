@@ -1,16 +1,26 @@
-# PUCITians - Web Deliverable 1
+# PUCITians - Web Deliverable 2
 
-Simple static HTML + Bootstrap pages.
+ASP.NET Core MVC with Identity login.
 
-Student: Mudassir Ashraf  
+Student: Mudassir Ashraf
 Roll: BSEF24M015
 
-## Pages
-- index.html
-- login.html
-- signup.html
-- student-home.html
-- teacher-home.html
-- admin-home.html
+D1 static pages are the html files in the repo root.
+The MVC app is in the PUCITians_WEB folder.
 
-Open index.html in browser.
+## Run
+
+```
+cd PUCITians_WEB
+dotnet run
+```
+
+## Logins
+
+Password for all three: Password@123
+
+- student@pucit.edu.pk
+- teacher@pucit.edu.pk
+- admin@pucit.edu.pk
+
+Signup needs an @pucit.edu.pk email.

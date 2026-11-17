@@ -1,0 +1,33 @@
+@model AdminHomeViewModel
+@{
+    ViewData["Title"] = "Admin Home";
+}
+
+<div class="mt-4">
+    <h2>Admin Home</h2>
+    <p>Welcome, @Model.Name. Create classes, add teachers, and approve wiki posts.</p>
+
+    <div class="box">
+        <h4>Classes</h4>
+        <ul>
+            @foreach (var item in Model.Classes)
+            {
+                <li>@item</li>
+            }
+        </ul>
+        <button class="btn btn-primary btn-sm" type="button">Create class</button>
+        <button class="btn btn-secondary btn-sm" type="button">Add teacher</button>
+    </div>
+
+    <div class="box">
+        <h4>Pending Wiki Posts</h4>
+        <ul>
+            @foreach (var item in Model.PendingPosts)
+            {
+                <li>@item</li>
+            }
+        </ul>
+        <button class="btn btn-success btn-sm" type="button">Approve</button>
+        <button class="btn btn-danger btn-sm" type="button">Reject</button>
+    </div>
+</div>

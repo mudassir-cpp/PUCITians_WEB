@@ -1,0 +1,32 @@
+@model TeacherHomeViewModel
+@{
+    ViewData["Title"] = "Teacher Home";
+}
+
+<div class="mt-4">
+    <h2>Teacher / TA Home</h2>
+    <p>Welcome, @Model.Name. Post materials, announcements, and manage marksheet visibility.</p>
+
+    <div class="box">
+        <h4>My Classes</h4>
+        <ul>
+            @foreach (var item in Model.Classes)
+            {
+                <li>@item</li>
+            }
+        </ul>
+        <button class="btn btn-primary btn-sm" type="button">New announcement</button>
+        <button class="btn btn-secondary btn-sm" type="button">Upload material</button>
+    </div>
+
+    <div class="box">
+        <h4>Marksheet</h4>
+        <ul>
+            @foreach (var item in Model.Marksheet)
+            {
+                <li>@item</li>
+            }
+        </ul>
+        <button class="btn btn-primary btn-sm" type="button">Edit visibility</button>
+    </div>
+</div>
